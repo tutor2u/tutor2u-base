@@ -5,24 +5,24 @@
 {# Inputs #}
 
 {% macro hidden(config) -%}
-    {% include "_base_includes/forms/hidden" with config only %}
+    {% include "_base/_includes/forms/hidden" with config only %}
 {%- endmacro %}
 
 {% macro text(config) %}
-    {% include "_base_includes/forms/text" with config only %}
+    {% include "_base/_includes/forms/text" with config only %}
 {% endmacro %}
 
 {% macro password(config) %}
-    {% include "_base_includes/forms/password" with config only %}
+    {% include "_base/_includes/forms/password" with config only %}
 {% endmacro %}
 
 {% macro checkbox(config) %}
-    {% include "_base_includes/forms/checkbox" with config only %}
+    {% include "_base/_includes/forms/checkbox" with config only %}
 {% endmacro %}
 
 
 {% macro checkboxGroup(config) %}
-    {% include "_base_includes/forms/checkboxGroup" with config only %}
+    {% include "_base/_includes/forms/checkboxGroup" with config only %}
 {% endmacro %}
 
 
@@ -30,7 +30,7 @@
 
 
 {% macro field(config, input) %}
-    {% include "_base_includes/forms/field" with config|merge({ input: input }) only %}
+    {% include "_base/_includes/forms/field" with config|merge({ input: input }) only %}
 {% endmacro %}
 
 
