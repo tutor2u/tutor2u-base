@@ -1,0 +1,32 @@
+{%- spaceless %}
+
+{% set class = (class ?? [])|explodeClass|merge([
+    'h-4 w-4'
+]|filter) %}
+
+{% set value = (value is defined ? value : 1) %}
+{% set id = (id is defined and id ? id : 'checkbox'~random()) %}
+{% set label = (label is defined ? label) %}
+
+{% if name is defined and (name|length < 3 or name|slice(-2) != '[]') %}
+    {{ hiddenInput(name, '') }}
+{% endif %}
+
+<div class="relative flex items-start">
+    <div class="flex items-center h-5">
+        <input type="checkbox" value="{{ value }}" class="{{ class|join(' ') }}"
+            {%- if id %} id="{{ id }}"{% endif %}
+            {%- if name is defined %} name="{{ name }}"{% endif %}
+            {%- if checked is defined and checked %} checked{% endif %}
+            {%- if disabled is defined and disabled %} disabled{% endif %}
+            {%- if block('attr') is defined %} {{ block('attr') }}{% endif %}>
+    </div>
+    <div class="ml-2.5 leading-5">
+        <label for="{{ id }}">{{ label }}</label>
+        {% if info ?? null %}
+            <div class="mt-1 text-gray-500">{{ info|md|raw }}</div>
+        {% endif %}
+    </div>
+</div>
+
+{% endspaceless -%}
