@@ -2,7 +2,7 @@
     "name": "tutor2u/base",
     "description": "Common templates and utilities for tutor2u websites for Craft CMS.",
     "type": "yii-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "support": {
         "email": "dev@tutor2u.net",
         "issues": "https://github.com/tutor2u/tutor2u-base/issues?state=open",
