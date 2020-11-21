@@ -1,0 +1,28 @@
+{
+    "name": "tutor2u/base",
+    "description": "Common templates and utilities for tutor2u websites for Craft CMS.",
+    "type": "yii-module",
+    "version": "1.0",
+    "support": {
+        "email": "dev@tutor2u.net",
+        "issues": "https://github.com/tutor2u/tutor2u-base/issues?state=open",
+        "source": "https://github.com/tutor2u/tutor2u-base",
+        "docs": "https://github.com/tutor2u/tutor2u-base",
+        "rss": "https://github.com/tutor2u/tutor2u-base/commits/v2.atom"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tutor2u",
+            "homepage": "https://www.tutor2u.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "tutor2u\\base\\": "src/"
+        }
+    }
+}
