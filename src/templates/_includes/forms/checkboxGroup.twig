@@ -13,7 +13,7 @@
             {%- set option = {label: option, value: key} %}
         {%- endif %}
         <div class="{% if not loop.first %}mt-3{% endif %}">
-            {% include "_includes/forms/checkbox" with {
+            {% include "_base/_includes/forms/checkbox" with {
                 id:        (loop.first and id is defined ? id : null),
                 name:      name,
                 checked:   (option.value is defined and option.value in values)

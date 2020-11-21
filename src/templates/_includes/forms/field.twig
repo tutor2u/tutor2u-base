@@ -88,5 +88,5 @@
             html: warning|md(inlineOnly=true)|replace('/&amp;(\\w+);/', '&$1;'),
         }) }}
     {% endif %}
-    {% include "_includes/forms/errorList" with { errors: errors } %}
+    {% include "_base/_includes/forms/errorList" with { errors: errors } %}
 </div>
